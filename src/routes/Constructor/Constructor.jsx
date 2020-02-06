@@ -21,7 +21,7 @@ export default React.memo(() => {
 					</div>
 					<div style={{width: '70%', backgroundColor: '#eee'}}>
 						<Tools />
-						<Field style={{backgroundColor: 'blue'}} />
+						<Field />
 					</div>
 
 				</div>

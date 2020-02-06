@@ -6,6 +6,13 @@ export const Inputs = React.memo(() => {
 
 	const {dispatch, ...stateInputs} = React.useContext(ContextInput);
 	const inputs = stateInputs.state.inputs
+
+	const addInputText = () => {
+		dispatch({
+			type: 'ADD_INPUT'
+
+		})
+	}
 	return (
 			<div>
 				{
@@ -23,11 +30,19 @@ export const Inputs = React.memo(() => {
 										}
 									})
 								}}
+								onClick={() => {
+									dispatch({
+										type: 'ACTIVE_INPUTS',
+										payload: {
+											id: index,											
+										}
+									})
+								}}
 
 								/>
 					})
 				}
-				
+				<button onClick={addInputText}>Create text</button>
 			</div>
 		)
 })
