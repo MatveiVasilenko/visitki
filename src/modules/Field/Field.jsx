@@ -10,6 +10,7 @@ export const Field = React.memo(() => {
 			<div style={{backgroundColor: 'blue', color: '#fff', height: '95%'}} >
 				{
 					inputs.map((input, index) => {
+								{console.log(input.bold)}
 						return <div 
 								key={index}
 								style={{

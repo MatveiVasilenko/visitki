@@ -24,6 +24,9 @@ const ReducerInput = (state, action) => {
 		case 'CHAHGE_BOLD' :
 		state.inputs[state.activeInput].bold = !state.inputs[state.activeInput].bold
 		console.log(state)
+		return {
+			...state
+		}
 		default: 
 		return state
 	}
