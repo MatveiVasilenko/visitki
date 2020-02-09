@@ -10,11 +10,14 @@ export const Field = React.memo(() => {
 			<div style={{backgroundColor: 'blue', color: '#fff', height: '95%'}} >
 				{
 					inputs.map((input, index) => {
-								{console.log(input.bold)}
 						return <div 
 								key={index}
 								style={{
-									fontWeight: input.bold ? '700' : '400'
+									fontWeight: input.bold ? '700' : '400',
+									fontStyle: input.style ? 'italic' : 'normal',
+									textDecoration: input.underline ? 'underline' : 'none',
+									fontSize: `${input.fontSize}px`,
+									color: input.color
 								}}
 
 								>{input.text}</div>

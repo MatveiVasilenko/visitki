@@ -23,7 +23,26 @@ const ReducerInput = (state, action) => {
 
 		case 'CHAHGE_BOLD' :
 		state.inputs[state.activeInput].bold = !state.inputs[state.activeInput].bold
-		console.log(state)
+		return {
+			...state
+		}
+		case 'CHAHGE_STYLE' :
+		state.inputs[state.activeInput].style = !state.inputs[state.activeInput].style
+		return {
+			...state
+		}
+		case 'CHAHGE_UNDERLINE' :
+		state.inputs[state.activeInput].underline = !state.inputs[state.activeInput].underline
+		return {
+			...state
+		}
+		case 'CHAHGE_FONTSIZE' :
+		state.inputs[state.activeInput].fontSize = action.payload
+		return {
+			...state
+		}
+		case 'CHAHGE_COLOR' :
+		state.inputs[state.activeInput].color = action.payload.hex
 		return {
 			...state
 		}
